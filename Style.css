@@ -9,6 +9,12 @@ body{
     background-color: #D8F6CE;
     color: white;
 }
+#userContent{
+    visibility: hidden;
+    display: none;
+    border: solid black;
+    height: auto;
+}
 #loginform
 {
     width:500px;

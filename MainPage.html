@@ -13,6 +13,7 @@
 
     <!--Extra Styling en angular -->
     <link href="style.css" rel="stylesheet">
+    <script src="Server.js"></script>
     <script src="App.js"></script>
 
     
@@ -33,6 +34,24 @@
     <title>Title</title>
 </head>
 <body ng-app="app">
+<<<<<<< HEAD
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1726741820895358',
+            xfbml      : true,
+            version    : 'v2.5'
+        });
+    };
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src="https://connect.facebook.net/en_US/all.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <nav class="navbar navbar-default">
     <div class="container-fluid" ng-controller="NavbarController">
         <div class="navbar-header">
@@ -61,6 +80,7 @@
             <input type = "text" id = "login" placeholder = "Email Id" name = "uid">
             <input type = "password" id = "password" name = "upass" placeholder = "***">
             <input type = "submit" id = "dologin" value = "Login">
+            <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="true" data-auto-logout-link="false"></div>
         </form>
     </div>
 </center>
