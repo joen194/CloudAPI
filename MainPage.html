@@ -13,6 +13,7 @@
 
     <!--Extra Styling en angular -->
     <link href="style.css" rel="stylesheet">
+    <script src="Server.js"></script>
     <script src="App.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -32,6 +33,29 @@
     <title>Title</title>
 </head>
 <body ng-app="app">
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1726741820895358',
+            xfbml      : true,
+            version    : 'v2.5'
+        });
+    };
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src="https://connect.facebook.net/en_US/all.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<div
+        class="fb-like"
+        data-share="true"
+        data-width="450"
+        data-show-faces="true">
+</div>
+
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
     <div class="container-fluid" ng-controller="NavbarController">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,8 +67,6 @@
             <ul class=" nav navbar-nav">
                 <li><a href="#">My pinboards</a></li>
                 <li><a href="#">andere</a></li>
-
-
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -55,17 +77,26 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav> <!-- Einde van de Navigatiebar-->
-
+<div
+        class="fb-like"
+        data-share="true"
+        data-width="450"
+        data-show-faces="true">
+</div>
+    <div id="userContent">
+        <p>Hier komt alle data in te staan</p>
+    </div>
 
 
 <!--Login-->
 <center>
-    <div id = "loginform">
+    <div id = "loginform" ng-controller="LoginVenster">
         <form method = "post" action = "">
             <p>Log in</p>
             <input type = "text" id = "login" placeholder = "Email Id" name = "uid">
-            <input type = "password" id = "password" name = "upass" placeholder = "***">
-            <input type = "submit" id = "dologin" value = "Login">
+            <input type = "password" id = "password" name = "upass" placeholder = "*********">
+            <input type = "submit" id = "dologin" value = "Login" ng-click="LogIn()">
+            <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="true" data-auto-logout-link="false"></div>
         </form>
     </div>
 </center>

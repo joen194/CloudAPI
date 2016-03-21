@@ -8,4 +8,15 @@ app.controller("NavbarController", function($scope){
         $("#loginform").fadeIn();
         $("#loginform").css({"visibility":"visible","display":"block"});
     }
+});
+app.controller("LoginVenster",function($scope){
+    $scope.LogIn = function(){
+        getData();
+    }
+    function getData(){
+        $("#userContent").fadeIn();
+        $("#userContent").css({"visibility":"visible", "display":"block"});
+        $("#loginform").fadeOut();
+        $("#loginform").css({"visibility":"hidden","display":"none"});
+    }
 })
