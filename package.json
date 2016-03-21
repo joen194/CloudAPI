@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private":true,
   "description": "",
-  "main": "expressserver.js",
+  "main": "App.js",
   "dependencies": {
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
